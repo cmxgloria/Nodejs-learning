@@ -35,3 +35,40 @@ setTimeout(funcOne, 8*1000, 8);
 'Hello after 8 seconds'
 ```
 
+setInterval for looping the time every seconds until stop if press the control+C
+```
+setInterval (()=>console.log('Hello every 3 seconds'),3000);
+```
+
+if you do not want to see the message then see the sample as below
+```
+const timeId = setTimeout(()=>console.log('You will not see this one.'),0);
+//setImmediate
+clearTimeout(timeId);
+//clearInterval
+//clearImmediate
+```
+
+```
+setTimeout(()=>console.log('Hello delay 0.5 seconds'),500);
+for(i=0;i<1e10;i++){
+  //Block Node Synchronously
+}
+```
+
+Timer to stop after a certain times
+```
+let counter = 0;
+const intervalId = setInterval(()=>{console.log('hello for 5 times');
+  counter +=1;
+  if(counter===5){console.log('Done');
+    clearInterval(intervalId);
+  }
+  
+},1000)
+//'hello for 5 times'
+'hello for 5 times'
+'hello for 5 times'
+'hello for 5 times'
+'Done'
+```
