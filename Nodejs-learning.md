@@ -119,3 +119,26 @@ o3.greet()
 'Hello Tina from grade 1. '
 'I am a specail.'
 ```
+
+## async await
+```
+const https = require('https');
+function fetch(url) {
+  return new Promise((resolve, reject) => {
+    https.get(url, (res) => {
+      let data = '';
+      res.on('data', (rd) => data = data + rd);
+      res.on('end', () => resolve(data));
+      res.on('error', reject);
+    });
+  });
+}
+fetch('https://www.jacascript.com/')
+  .then(data => {
+    console.log(data.length)
+  });
+(async function read() {
+  const data = await fetch('https://www.jacascript.com/');
+  console.log(data.length);
+})();
+```
