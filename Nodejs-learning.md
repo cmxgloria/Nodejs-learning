@@ -11,3 +11,7 @@ picking good options
 small packages
 
 what is callback? It is a function that node will "call back" in later point in the time of program.
+
+## getting started
+cr..single tab  then search to the cr... that word
+c...double tab the search all the words start with c
