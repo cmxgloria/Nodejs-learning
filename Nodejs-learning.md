@@ -72,3 +72,50 @@ const intervalId = setInterval(()=>{console.log('hello for 5 times');
 'hello for 5 times'
 'Done'
 ```
+
+## Node CLI
+REPL and execute script
+not sure this one
+```
+process.stdin.on('readable',()=>{
+  const chuck= process.stdin.read();
+  if(chuck!==null){
+    process.stdout.write(chuck);
+  }
+});
+```
+
+## variable and block scopes
+
+## class
+```
+class Person{
+  constructor(name){
+    this.name = name;
+  }
+  greet(){
+    console.log(`Hello ${this.name}`);
+  }
+}
+class Student extends Person {
+  constructor(name,level){
+    super(name)
+    this.level = level;
+  }
+  greet(){
+    console.log(`Hello ${this.name} from ${this.level}. `);
+  }
+}
+const o1 = new Person('Max');
+const o2 = new Student('Tina','grade 1');
+const o3 = new Student('Matt', 'grade 2');
+
+o3.greet = () => console.log('I am a specail.');
+
+o1.greet()
+o2.greet()
+o3.greet()
+//'Hello Max'
+'Hello Tina from grade 1. '
+'I am a specail.'
+```
