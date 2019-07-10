@@ -180,4 +180,31 @@ npm i express
  first-Major Breaking Changes
  second--Minor Backward Compatible
  third--Patch Bug Fixes
+ eg ~4.2.0 can change 4.2.x(x can be any greater than 0)
+ eg ^1.2.3 can change 1.x.y(x can be any greater than 2 and y can be any greater than 3)
+ 
+ ## npm install
+ ---99% install from local
+---- 1% install from globle, like the create-react-app
+npm i -g create-react-app
+
+## npm create and publish
+
+## npx and the npm run script
+npm start
+npm test // normally for local
+npx jest // can work outside the local
+npm run check
+
+npx eslint// can work outside the local
+npx eslint --init
+
+## update npm package
+if 
+npm unistall express
+then the express from dependencies will be gone
+
+npm show request version
+request is one of dependencies, it shows all the request versions
+
  
