@@ -207,4 +207,19 @@ then the express from dependencies will be gone
 npm show request version
 request is one of dependencies, it shows all the request versions
 
- 
+```
+npm outdated
+package current wanted  latest   location
+lodash  4.16.6  4.16.6  4.17.10   5-update
+npm update
+```
+it shows all details
+
+npm i lodash@latest
+npm show lodash version
+
+review 
+yarn(yarnpkg.org)
+npm command
+local and global installs
+
