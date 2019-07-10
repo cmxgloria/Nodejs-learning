@@ -149,3 +149,35 @@ why npm?
 share code with other developers
 re-use own code in other projects
 use code written by others
+
+## npm command
+npm -v
+6.1.0
+if install the lastest version
+npm install -g npm
+
+
+npm i express
+ 
+ ## package.json and package-lock.json
+ after you install, it shows on dependency
+ such as 
+ npm i lodash
+ 
+ ```
+ if 
+ npm i -D nodemon  (//D for developer)
+ so it show another like as below
+ "devDependencies":{
+ "nodemon":"^1.17.5"
+ }
+ ```
+ npm init --yes
+ it shows all the package.json of your project if you already link with git
+ 
+ ## npm use the semantic versioning(semVer)
+ eg 4.2.0
+ first-Major Breaking Changes
+ second--Minor Backward Compatible
+ third--Patch Bug Fixes
+ 
