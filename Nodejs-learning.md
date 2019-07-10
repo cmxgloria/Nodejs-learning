@@ -145,3 +145,7 @@ fetch('https://www.jacascript.com/')
 
 
 # NPM
+why npm?
+share code with other developers
+re-use own code in other projects
+use code written by others
