@@ -270,7 +270,32 @@ files.forEach(file => {
   }
 //Error.....
 ```
+## node clusters
+```
+const fs = require('fs');
+const util = require('util');
 
+const readFile = util.promisify(fs.readFile);
+
+async function main() {
+  const data = await readFile(__filename);
+  console.log('File data is', data);
+}
+main();
+console.log('TEST');
+```
+
+sample
+```
+const (readFile) = require('fs').promises;
+
+async function main() {
+  const data = await readfile(__filename);
+  console.log('File data is', data);
+}
+main();
+console.log('TEST');
+```
 
 
 
