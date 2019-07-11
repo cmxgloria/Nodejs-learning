@@ -373,3 +373,23 @@ server.listen(4242, () => {
   console.log('Server is running...');
 });
 ```
+
+www.sailsjs.com
+www.meteor.com
+those to build the web server with nodejs
+
+## using template languages
+pugjs.org
+www.handlebarsjs.com
+www.ejs.co
+www.jsx.github.io
+www.react.org
+
+##review
+node for web
+built-in modules
+reloading node
+the req and res objects
+express
+EJS
+
