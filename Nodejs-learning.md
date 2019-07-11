@@ -336,4 +336,26 @@ myEmitter.on('TEST_EVENT', () => {
 //'TEST_EVENT was fired'
 //'TEST_EVENT was fired'
 ```
+##review
+node modules
+types of APIs
+the global object
+event loop
+error handling cluster
+async patterns
+
+# working with web servers
+```
+const http = require('http');
+const requestListener = (req, res) => {
+  res.write('Hello World');
+  res.end();
+};
+const server = http.createServer();
+server.on('request', requestListener);
+
+server.listen(4242, () => {
+  console.log('Server is running...');
+});
+```
 
