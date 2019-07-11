@@ -393,3 +393,38 @@ the req and res objects
 express
 EJS
 
+# working with the operating system
+os 
+fs 
+child_process
+
+os
+```
+const os = require('os');
+console.log('OS paltform', os.platform());
+console.log('OS CPU architecture:', os.arch());
+console.log('# of logical CPU cires', os.cpus().length);
+console.log('Home deirectory for current user', os.homedir());
+console.log('line 1' + os.EOL + 'line 2' + os.EOL + 'line 3');
+```
+
+child_process
+```
+const {spawn} = rquire('child_process');
+//print working directory
+const pwd = spawn('pwd');
+pwd.stdout.pipe(process.stdout);
+// read content of a file
+const {HOME} = process.env;
+const cat =spawn('cat',[`${HOME}/.bash_profile`]);
+cat.stdout.pipe(process.stdout);
+// List files
+const ls = spawn('ls',['-l','.']);
+ls.stdout.pipe(process.stdout);
+// use shell syntax
+const shell = spawn('ls -al ~ | wc -l',{shell:true});
+shell.stdout.pipe(process.stdout);
+```
+
+## Debugging node application
+chrome://inspect/#devices
