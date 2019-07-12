@@ -359,3 +359,72 @@ server.listen(4242, () => {
 });
 ```
 
+## node web framework
+```
+const http = require('http');
+const requestListener = (req, res) => {
+  res.write('Hello World');
+  res.end();
+};
+const server = http.createServer();
+server.on('request', requestListener);
+
+server.listen(4242, () => {
+  console.log('Server is running...');
+});
+```
+
+www.sailsjs.com
+www.meteor.com
+those to build the web server with nodejs
+
+## using template languages
+pugjs.org
+www.handlebarsjs.com
+www.ejs.co
+www.jsx.github.io
+www.react.org
+
+##review
+node for web
+built-in modules
+reloading node
+the req and res objects
+express
+EJS
+
+# working with the operating system
+os 
+fs 
+child_process
+
+os
+```
+const os = require('os');
+console.log('OS paltform', os.platform());
+console.log('OS CPU architecture:', os.arch());
+console.log('# of logical CPU cires', os.cpus().length);
+console.log('Home deirectory for current user', os.homedir());
+console.log('line 1' + os.EOL + 'line 2' + os.EOL + 'line 3');
+```
+
+child_process
+```
+const {spawn} = rquire('child_process');
+//print working directory
+const pwd = spawn('pwd');
+pwd.stdout.pipe(process.stdout);
+// read content of a file
+const {HOME} = process.env;
+const cat =spawn('cat',[`${HOME}/.bash_profile`]);
+cat.stdout.pipe(process.stdout);
+// List files
+const ls = spawn('ls',['-l','.']);
+ls.stdout.pipe(process.stdout);
+// use shell syntax
+const shell = spawn('ls -al ~ | wc -l',{shell:true});
+shell.stdout.pipe(process.stdout);
+```
+
+## Debugging node application
+chrome://inspect/#devices
